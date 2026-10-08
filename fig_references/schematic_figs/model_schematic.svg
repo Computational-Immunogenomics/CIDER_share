@@ -1,0 +1,48 @@
+<svg viewBox="0 0 470 230" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+
+  <rect width="470" height="230" fill="#ffffff" rx="8"/>
+
+  <!-- ── Column labels ── -->
+  <text x="105" y="16" font-size="9.5" font-weight="600" fill="#999999" letter-spacing="0.8" text-anchor="middle">INPUTS</text>
+  <text x="357" y="16" font-size="9.5" font-weight="600" fill="#999999" letter-spacing="0.8" text-anchor="middle">MODEL</text>
+
+  <!-- ── CIDER input box ── -->
+  <rect x="18" y="24" width="175" height="72" rx="6" fill="#ffffff" stroke="#888888" stroke-width="1.5"/>
+  <text x="105" y="41" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">CIDER T-cell Score</text>
+  <text x="105" y="57" font-size="9.5" fill="#555555" text-anchor="middle">log&#x2082;(CIDER Score + 1)</text>
+  <text x="105" y="71" font-size="9" fill="#777777" text-anchor="middle">CDR3 sequences from WGS</text>
+  <text x="105" y="83" font-size="8.5" fill="#999999" text-anchor="middle">ICI-treated · N = 647 · known RECIST</text>
+
+  <!-- ── TMB input box ── -->
+  <rect x="18" y="130" width="175" height="60" rx="6" fill="#ffffff" stroke="#888888" stroke-width="1.5"/>
+  <text x="105" y="147" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Tumour Mutational</text>
+  <text x="105" y="161" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Burden (TMB)</text>
+  <text x="105" y="176" font-size="9.5" fill="#555555" text-anchor="middle">log&#x2082;(TMB per Mb + 1)</text>
+
+  <!-- ── Arrows into Logistic Regression ── -->
+  <!-- CIDER → LR: horizontal -->
+  <line x1="193" y1="60" x2="268" y2="60" stroke="#888888" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+  <!-- TMB → LR: diagonal up-right -->
+  <line x1="193" y1="160" x2="268" y2="105" stroke="#888888" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+
+  <!-- ── Logistic Regression box ── -->
+  <rect x="270" y="24" width="175" height="80" rx="8" fill="#ffffff" stroke="#888888" stroke-width="2"/>
+  <text x="357" y="46" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Logistic</text>
+  <text x="357" y="60" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Regression</text>
+  <text x="357" y="76" font-size="9" fill="#666666" text-anchor="middle">binary: response / no response</text>
+  <text x="357" y="90" font-size="9" fill="#666666" text-anchor="middle">trained on ICI cohort</text>
+
+  <!-- ── Arrow LR → P(Response): vertical ── -->
+  <line x1="357" y1="104" x2="357" y2="128" stroke="#555555" stroke-width="2" marker-end="url(#arr-dark)"/>
+
+  <!-- ── P(Response) box ── -->
+  <rect x="270" y="130" width="175" height="60" rx="8" fill="#ffffff" stroke="#888888" stroke-width="2"/>
+  <text x="357" y="149" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">P(Response)</text>
+  <text x="357" y="164" font-size="9.5" fill="#555555" text-anchor="middle">probability 0 &#x2013; 100%</text>
+  <text x="357" y="177" font-size="9" fill="#777777" text-anchor="middle">per patient · Panels B &amp; C</text>
+
+  <defs>
+    <marker id="arr-grey"   markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#888888"/></marker>
+    <marker id="arr-dark"   markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#555555"/></marker>
+  </defs>
+</svg>

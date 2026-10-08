@@ -1,0 +1,53 @@
+<svg viewBox="0 0 470 270" xmlns="http://www.w3.org/2000/svg" font-family="'Helvetica Neue', Arial, sans-serif">
+
+  <rect width="470" height="270" fill="#ffffff" rx="8"/>
+
+  <!-- ── Column labels ── -->
+  <text x="105" y="16" font-size="9.5" font-weight="600" fill="#999999" letter-spacing="0.8" text-anchor="middle">INPUTS</text>
+  <text x="357" y="16" font-size="9.5" font-weight="600" fill="#999999" letter-spacing="0.8" text-anchor="middle">MODEL</text>
+
+  <!-- ── CIDER input box ── -->
+  <rect x="18" y="24" width="175" height="56" rx="6" fill="#ffffff" stroke="#888888" stroke-width="1.5"/>
+  <text x="105" y="48" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">CIDER T-cell Score</text>
+  <text x="105" y="64" font-size="9.5" fill="#555555" text-anchor="middle">log&#x2082;(CIDER Score + 1)</text>
+
+  <!-- ── TMB input box ── -->
+  <rect x="18" y="94" width="175" height="60" rx="6" fill="#ffffff" stroke="#888888" stroke-width="1.5"/>
+  <text x="105" y="112" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Tumour Mutational</text>
+  <text x="105" y="126" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Burden (TMB)</text>
+  <text x="105" y="140" font-size="9.5" fill="#555555" text-anchor="middle">log&#x2082;(TMB per Mb + 1)</text>
+
+  <!-- ── Pretreatment input box ── -->
+  <rect x="18" y="168" width="175" height="56" rx="6" fill="#ffffff" stroke="#888888" stroke-width="1.5"/>
+  <text x="105" y="192" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Pretreatment Status</text>
+  <text x="105" y="208" font-size="9.5" fill="#555555" text-anchor="middle">prior systemic therapy (yes/no)</text>
+
+  <!-- ── Arrows into Logistic Regression ── -->
+  <!-- CIDER → LR: diagonal up-right -->
+  <line x1="193" y1="52" x2="270" y2="100" stroke="#888888" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+  <!-- TMB → LR: horizontal -->
+  <line x1="193" y1="124" x2="270" y2="124" stroke="#888888" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+  <!-- Pretreatment → LR: diagonal down-right -->
+  <line x1="193" y1="196" x2="270" y2="148" stroke="#888888" stroke-width="1.8" marker-end="url(#arr-grey)"/>
+
+  <!-- ── Logistic Regression box ── -->
+  <rect x="270" y="84" width="175" height="80" rx="8" fill="#ffffff" stroke="#888888" stroke-width="2"/>
+  <text x="357" y="106" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Logistic</text>
+  <text x="357" y="120" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">Regression</text>
+  <text x="357" y="136" font-size="9" fill="#666666" text-anchor="middle">3 predictors</text>
+  <text x="357" y="149" font-size="9" fill="#666666" text-anchor="middle">trained on ICI cohort</text>
+
+  <!-- ── Arrow LR → P(Response): vertical ── -->
+  <line x1="357" y1="164" x2="357" y2="186" stroke="#555555" stroke-width="2" marker-end="url(#arr-dark)"/>
+
+  <!-- ── P(Response) box ── -->
+  <rect x="270" y="188" width="175" height="60" rx="8" fill="#ffffff" stroke="#888888" stroke-width="2"/>
+  <text x="357" y="207" font-size="11" font-weight="700" fill="#333333" text-anchor="middle">P(Response)</text>
+  <text x="357" y="222" font-size="9.5" fill="#555555" text-anchor="middle">probability 0 &#x2013; 100%</text>
+  <text x="357" y="235" font-size="9" fill="#777777" text-anchor="middle">per patient · Panels B &amp; C</text>
+
+  <defs>
+    <marker id="arr-grey"   markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#888888"/></marker>
+    <marker id="arr-dark"   markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#555555"/></marker>
+  </defs>
+</svg>

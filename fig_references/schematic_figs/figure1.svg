@@ -1,0 +1,352 @@
+<svg width="776" height="364" viewBox="0 0 776 364"
+     xmlns="http://www.w3.org/2000/svg" font-family="Helvetica Neue, Arial, sans-serif">
+
+<rect x="0" y="0" width="776" height="364" fill="white"/>
+
+<!-- Panel labels — a 24px top margin was added to the canvas to fit these
+     without overlapping either panel's content. -->
+<text x="8"   y="19" font-size="18" font-weight="700" fill="#333333">A</text>
+<text x="458" y="19" font-size="18" font-weight="700" fill="#333333">B</text>
+
+<!-- ══════════════════════════════════════════════════════
+     PANEL A — TME biopsy site schematic (side-by-side with Panel B).
+     Overall canvas narrowed (850→813): Panel B's own slot was resized to
+     match its content's aspect ratio exactly, which eliminates the
+     letterbox strip that used to sit at the seam between the two panels.
+     viewBox 680×520 → 450×340 (scale 0.662). Panel slots now start at
+     y=24 (not 0) to sit below the new top margin that holds the A/B
+     panel labels.
+     ══════════════════════════════════════════════════════ -->
+<svg x="0" y="24" width="450" height="340" viewBox="0 0 680 520">
+<defs>
+  <radialGradient id="te" cx="40%" cy="35%" r="60%">
+    <stop offset="0%" stop-color="#DDD0F0"/><stop offset="100%" stop-color="#B090D8"/>
+  </radialGradient>
+  <radialGradient id="tf" cx="40%" cy="35%" r="60%">
+    <stop offset="0%" stop-color="#EDE8F8"/><stop offset="100%" stop-color="#C8BAE0"/>
+  </radialGradient>
+  <linearGradient id="nb" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#C8D0D8"/><stop offset="40%" stop-color="#E8ECF0"/><stop offset="100%" stop-color="#98A4B0"/>
+  </linearGradient>
+  <linearGradient id="nh" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#8898A8"/><stop offset="100%" stop-color="#607080"/>
+  </linearGradient>
+</defs>
+<g transform="translate(0,-20)">
+<rect x="30" y="30" width="590" height="483" rx="16" fill="#FEF9F3" stroke="#CC9955" stroke-width="1.6" stroke-dasharray="7 3.5"/>
+<text x="56" y="54" font-size="17.5" font-weight="600" fill="#B07828">Biopsy site</text>
+<g transform="translate(0,-25)">
+<ellipse cx="300" cy="275" rx="235" ry="195" fill="#F0EAF9" fill-opacity="0.68" stroke="#B89EDA" stroke-width="1.4" stroke-dasharray="5 3"/>
+<text x="300" y="72" text-anchor="middle" font-size="15.4" font-weight="600" fill="#6A48A0">Tumor Immune Microenvironment</text>
+<!-- Tumor cluster — free-standing cells -->
+<g>
+  <circle cx="300" cy="272" r="46" fill="#F5DEC8" stroke="#C07840" stroke-width="1.3"/>
+  <circle cx="300" cy="226" r="34" fill="#F5DEC8" stroke="#C07840" stroke-width="1.3"/>
+  <circle cx="352" cy="284" r="34" fill="#F5DEC8" stroke="#C07840" stroke-width="1.3"/>
+  <circle cx="264" cy="310" r="32" fill="#F5DEC8" stroke="#C07840" stroke-width="1.3"/>
+  <circle cx="258" cy="248" r="32" fill="#F5DEC8" stroke="#C07840" stroke-width="1.3"/>
+  <circle cx="296" cy="267" r="16" fill="#D4ECF8" stroke="#5890C0" stroke-width="1.4"/>
+  <circle cx="291" cy="262" r="5"  fill="#8CB8D8"/>
+  <circle cx="297" cy="222" r="11" fill="#D4ECF8" stroke="#5890C0" stroke-width="1.2"/>
+  <circle cx="348" cy="280" r="11" fill="#D4ECF8" stroke="#5890C0" stroke-width="1.2"/>
+  <circle cx="260" cy="306" r="10" fill="#D4ECF8" stroke="#5890C0" stroke-width="1.2"/>
+  <circle cx="254" cy="244" r="10" fill="#D4ECF8" stroke="#5890C0" stroke-width="1.2"/>
+</g>
+<text x="300" y="340" text-anchor="middle" font-size="18.2" fill="#8B5020" font-weight="600">Tumor</text>
+<!-- HLA molecule — kept only on the tumor cell contacted by the (sole) engaged
+     T cell at top; the other two generic HLA markers were removed for clarity. -->
+<line x1="300" y1="208" x2="300" y2="195" stroke="#C85020" stroke-width="2.2"/>
+<line x1="300" y1="195" x2="292" y2="185" stroke="#C85020" stroke-width="2.2"/>
+<line x1="300" y1="195" x2="308" y2="185" stroke="#C85020" stroke-width="2.2"/>
+<text x="306" y="198" text-anchor="start" font-size="11.4" fill="#C85020" font-weight="600">HLA</text>
+<!-- Engaged T cell — centered directly above the HLA molecule it contacts. -->
+<ellipse cx="300" cy="130" rx="33" ry="33" fill="url(#te)" stroke="#7050A8" stroke-width="2"/>
+<!-- A T cell's surface is studded with many copies of the SAME clonal TCR,
+     not just one: these small extra pairs convey that repetition. -->
+<line x1="298" y1="97" x2="298" y2="89" stroke="#D08030" stroke-width="1.1"/>
+<line x1="302" y1="97" x2="302" y2="89" stroke="#5890C0" stroke-width="1.1"/>
+<line x1="267" y1="128" x2="259" y2="128" stroke="#D08030" stroke-width="1.1"/>
+<line x1="267" y1="132" x2="259" y2="132" stroke="#5890C0" stroke-width="1.1"/>
+<!-- TCR chain pair, modeled on reference TCR diagram. -->
+<rect x="296.25" y="163" width="3.5" height="6" rx="1.75" fill="#D08030"/>
+<rect x="300.25" y="163" width="3.5" height="6" rx="1.75" fill="#5890C0"/>
+<path d="M296,168 Q298,171.5 300,168" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/>
+<line x1="298" y1="169" x2="292" y2="185" stroke="#D08030" stroke-width="1.3" stroke-dasharray="2 1.5"/>
+<line x1="302" y1="169" x2="308" y2="185" stroke="#5890C0" stroke-width="1.3" stroke-dasharray="2 1.5"/>
+<text x="300" y="136" text-anchor="middle" font-size="12.6" fill="#3A1860" font-weight="600">T cell</text>
+<!-- Callout: highlight box around the CDR3 loop tip, leader line to a
+     barcode-style box with the actual sequence. -->
+<rect x="294" y="165" width="8" height="7" rx="1.5" fill="#D08030" fill-opacity="0.15" stroke="#D08030" stroke-width="0.8" stroke-dasharray="1.3 1"/>
+<line x1="302" y1="168.5" x2="306" y2="170" stroke="#D08030" stroke-width="0.8"/>
+<rect x="306" y="161.5" width="116" height="17" rx="3" fill="#F5EDE0"/>
+<text x="364" y="174" text-anchor="middle" font-size="10.5" font-family="Courier New, monospace" fill="#3A2060">CAVSDNQGGKLIF</text>
+<!-- Free T cells -->
+<ellipse cx="160" cy="235" rx="27.75" ry="27.75" fill="url(#tf)" stroke="#9070B8" stroke-width="1.6"/>
+<line x1="132.25" y1="233" x2="124.25" y2="233" stroke="#D08030" stroke-width="1.1"/>
+<line x1="132.25" y1="237" x2="124.25" y2="237" stroke="#5890C0" stroke-width="1.1"/>
+<line x1="187.75" y1="233" x2="195.75" y2="233" stroke="#D08030" stroke-width="1.1"/>
+<line x1="187.75" y1="237" x2="195.75" y2="237" stroke="#5890C0" stroke-width="1.1"/>
+<rect x="156.25" y="194.5" width="3.5" height="12.75" rx="1.75" fill="#D08030"/>
+<rect x="160.25" y="194.5" width="3.5" height="12.75" rx="1.75" fill="#5890C0"/>
+<path d="M156,195.5 Q158,192 160,195.5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/>
+<text x="160" y="241" text-anchor="middle" font-size="12.6" fill="#5A3A8A" font-weight="600">T cell</text>
+<rect x="154" y="190" width="8" height="7" rx="1.5" fill="#D08030" fill-opacity="0.15" stroke="#D08030" stroke-width="0.8" stroke-dasharray="1.3 1"/>
+<line x1="158" y1="190" x2="158" y2="186" stroke="#D08030" stroke-width="0.8"/>
+<rect x="71" y="169" width="116" height="17" rx="3" fill="#F5EDE0"/>
+<text x="129" y="182" text-anchor="middle" font-size="10.5" font-family="Courier New, monospace" fill="#3A2060">CAVSDNQGGKLIF</text>
+<ellipse cx="210" cy="385" rx="27.75" ry="27.75" fill="url(#tf)" stroke="#9070B8" stroke-width="1.6"/>
+<line x1="182.25" y1="383" x2="174.25" y2="383" stroke="#D08030" stroke-width="1.1"/>
+<line x1="182.25" y1="387" x2="174.25" y2="387" stroke="#5890C0" stroke-width="1.1"/>
+<line x1="237.75" y1="383" x2="245.75" y2="383" stroke="#D08030" stroke-width="1.1"/>
+<line x1="237.75" y1="387" x2="245.75" y2="387" stroke="#5890C0" stroke-width="1.1"/>
+<rect x="206.25" y="412.75" width="3.5" height="12.75" rx="1.75" fill="#D08030"/>
+<rect x="210.25" y="412.75" width="3.5" height="12.75" rx="1.75" fill="#5890C0"/>
+<path d="M210,424.5 Q212,428 214,424.5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/>
+<text x="210" y="391" text-anchor="middle" font-size="12.6" fill="#5A3A8A" font-weight="600">T cell</text>
+<rect x="208" y="422" width="8" height="7" rx="1.5" fill="#5890C0" fill-opacity="0.15" stroke="#5890C0" stroke-width="0.8" stroke-dasharray="1.3 1"/>
+<line x1="213" y1="429" x2="213" y2="432" stroke="#5890C0" stroke-width="0.8"/>
+<rect x="155" y="432" width="116" height="17" rx="3" fill="#E8E0F5"/>
+<text x="213" y="444" text-anchor="middle" font-size="10.5" font-family="Courier New, monospace" fill="#3A2060">CASSLGQGAYEQYF</text>
+<ellipse cx="390" cy="370" rx="27.75" ry="27.75" fill="url(#tf)" stroke="#9070B8" stroke-width="1.6"/>
+<line x1="362.25" y1="368" x2="354.25" y2="368" stroke="#509050" stroke-width="1.1"/>
+<line x1="362.25" y1="372" x2="354.25" y2="372" stroke="#2E8B8B" stroke-width="1.1"/>
+<line x1="388" y1="342.25" x2="388" y2="334.25" stroke="#509050" stroke-width="1.1"/>
+<line x1="392" y1="342.25" x2="392" y2="334.25" stroke="#2E8B8B" stroke-width="1.1"/>
+<rect x="386.25" y="397.75" width="3.5" height="12.75" rx="1.75" fill="#509050"/>
+<rect x="390.25" y="397.75" width="3.5" height="12.75" rx="1.75" fill="#2E8B8B"/>
+<path d="M386,409.5 Q388,413 390,409.5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/>
+<text x="390" y="376" text-anchor="middle" font-size="12.6" fill="#5A3A8A" font-weight="600">T cell</text>
+<rect x="384" y="407" width="8" height="7" rx="1.5" fill="#509050" fill-opacity="0.15" stroke="#509050" stroke-width="0.8" stroke-dasharray="1.3 1"/>
+<line x1="392" y1="414" x2="388" y2="417" stroke="#509050" stroke-width="0.8"/>
+<rect x="359" y="417" width="116" height="17" rx="3" fill="#E5F0E5"/>
+<text x="417" y="429" text-anchor="middle" font-size="10.5" font-family="Courier New, monospace" fill="#3A2060">CALWDSSGKLTF</text>
+<ellipse cx="120" cy="300" rx="27.75" ry="27.75" fill="url(#tf)" stroke="#9070B8" stroke-width="1.6"/>
+<line x1="92.25" y1="298" x2="84.25" y2="298" stroke="#D08030" stroke-width="1.1"/>
+<line x1="92.25" y1="302" x2="84.25" y2="302" stroke="#5890C0" stroke-width="1.1"/>
+<line x1="147.75" y1="298" x2="155.75" y2="298" stroke="#D08030" stroke-width="1.1"/>
+<line x1="147.75" y1="302" x2="155.75" y2="302" stroke="#5890C0" stroke-width="1.1"/>
+<rect x="116.25" y="327.75" width="3.5" height="12.75" rx="1.75" fill="#D08030"/>
+<rect x="120.25" y="327.75" width="3.5" height="12.75" rx="1.75" fill="#5890C0"/>
+<path d="M120,339.5 Q122,343 124,339.5" fill="none" stroke="white" stroke-width="1" stroke-linecap="round"/>
+<text x="120" y="306" text-anchor="middle" font-size="12.6" fill="#5A3A8A" font-weight="600">T cell</text>
+<rect x="118" y="337" width="8" height="7" rx="1.5" fill="#5890C0" fill-opacity="0.15" stroke="#5890C0" stroke-width="0.8" stroke-dasharray="1.3 1"/>
+<line x1="123" y1="344" x2="123" y2="347" stroke="#5890C0" stroke-width="0.8"/>
+<rect x="65" y="347" width="116" height="17" rx="3" fill="#E8E0F5"/>
+<text x="123" y="359" text-anchor="middle" font-size="10.5" font-family="Courier New, monospace" fill="#3A2060">CASSQGTGNTIYF</text>
+<!-- Stromal cells -->
+<circle cx="430" cy="190" r="7" fill="#AACAAA" stroke="#608860" stroke-width="1.3"/>
+<circle cx="166" cy="322" r="7" fill="#AACAAA" stroke="#608860" stroke-width="1.3"/>
+<circle cx="468" cy="316" r="7" fill="#AACAAA" stroke="#608860" stroke-width="1.3"/>
+<!-- Other immune cells -->
+<circle cx="95" cy="255" r="7" fill="#E8C060" stroke="#A08020" stroke-width="1.3"/>
+<circle cx="450" cy="405" r="7" fill="#E8C060" stroke="#A08020" stroke-width="1.3"/>
+<circle cx="160" cy="415" r="7" fill="#E8C060" stroke="#A08020" stroke-width="1.3"/>
+<!-- Core needle biopsy -->
+<g transform="rotate(-28, 558, 156)">
+  <rect x="368" y="149" width="190" height="14" rx="3" fill="url(#nb)" stroke="#7A8898" stroke-width="1"/>
+  <rect x="386" y="152.5" width="130" height="7" rx="1" fill="#F0D4BC" stroke="#C07040" stroke-width="0.6"/>
+  <polygon points="368,149 368,163 356,156" fill="#B8C4CC" stroke="#7A8898" stroke-width="1"/>
+  <line x1="448" y1="149" x2="448" y2="163" stroke="#7A8898" stroke-width="0.8" opacity="0.5"/>
+  <line x1="488" y1="149" x2="488" y2="163" stroke="#7A8898" stroke-width="0.8" opacity="0.5"/>
+  <rect x="548" y="142" width="44" height="28" rx="5" fill="url(#nh)" stroke="#506070" stroke-width="1"/>
+  <rect x="560" y="135" width="20" height="9"  rx="3" fill="#90A0B0" stroke="#607080" stroke-width="1"/>
+  <rect x="548" y="176" width="44" height="26" rx="4" fill="#607880" stroke="#506070" stroke-width="1"/>
+  <line x1="556" y1="178" x2="556" y2="200" stroke="#80929A" stroke-width="1.2"/>
+  <line x1="564" y1="178" x2="564" y2="200" stroke="#80929A" stroke-width="1.2"/>
+  <line x1="572" y1="178" x2="572" y2="200" stroke="#80929A" stroke-width="1.2"/>
+  <line x1="580" y1="178" x2="580" y2="200" stroke="#80929A" stroke-width="1.2"/>
+</g>
+<!-- Legend row 1 (text 20% bigger; swatches scaled to match). Shifted up
+     12 units (and box height trimmed to match) to close up blank space
+     between the TME oval and the legend. -->
+<circle cx="50.5" cy="498" r="7.8" fill="url(#te)" stroke="#7050A8" stroke-width="1.9"/>
+<text x="62"  y="503" font-size="12" fill="#3A1860">Engaged T cell (TCR–HLA)</text>
+<circle cx="254.5" cy="498" r="7.8" fill="url(#tf)" stroke="#9070B8" stroke-width="1.9"/>
+<text x="266" y="503" font-size="12" fill="#5A3A8A">T cell in TME</text>
+<line x1="400" y1="503" x2="400" y2="491" stroke="#C85020" stroke-width="2.4"/>
+<line x1="400" y1="491" x2="394" y2="482.6" stroke="#C85020" stroke-width="2.4"/>
+<line x1="400" y1="491" x2="406" y2="482.6" stroke="#C85020" stroke-width="2.4"/>
+<text x="412" y="503" font-size="12" fill="#C85020">HLA molecule</text>
+<line x1="502" y1="498" x2="538" y2="498" stroke="#7050A8" stroke-width="2.2" stroke-dasharray="3 2"/>
+<text x="541" y="503" font-size="12" fill="#7050A8">TCR contact</text>
+<!-- Legend row 2: the two longer descriptions share one row. -->
+<circle cx="51"  cy="517" r="7.2" fill="#AACAAA" stroke="#608860" stroke-width="1.6"/>
+<text x="62"  y="523" font-size="12" fill="#486848">Stromal cells (fibroblasts, endothelial)</text>
+<circle cx="308" cy="517" r="7.2" fill="#E8C060" stroke="#A08020" stroke-width="1.6"/>
+<text x="319" y="523" font-size="12" fill="#806010">Other immune cells (macrophages, NK, B cells)</text>
+</g>
+<!-- Core needle biopsy labels -->
+<text x="515" y="106" text-anchor="middle" font-size="14" fill="#607080" font-style="italic">Core needle</text>
+<text x="515" y="122" text-anchor="middle" font-size="14" fill="#607080" font-style="italic">biopsy</text>
+</g>
+</svg>
+
+<!-- ══════════════════════════════════════════════════════
+     PANEL B — WGS pipeline + scoring.
+     Top row: Biopsy core, DNA extraction/library prep, WGS sequencer.
+     Bottom row: just two boxes now — CDR3 repertoire (left) and a single
+     combined CIDER-score box (right) that stacks the CIDER score pill,
+     the worked-example calculation, and the infiltration scale inside
+     one column, top to bottom.
+     Panel narrowed (460→390) now that the bottom row only holds two
+     boxes instead of three, which is what lets the whole schematic run
+     thinner overall.
+     viewBox 288×300 → 326×340 (scale ~1.13, narrowed further now that the
+     WGS arrow is shorter and the bottom two boxes sit closer together)
+     ══════════════════════════════════════════════════════ -->
+<svg x="450" y="24" width="326" height="340" viewBox="0 0 288 300">
+<defs>
+  <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F5DEC8"/><stop offset="100%" stop-color="#EDCDB0"/>
+  </linearGradient>
+  <linearGradient id="tu" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#D8EEF8"/><stop offset="60%" stop-color="#EEF6FC"/><stop offset="100%" stop-color="#B8D8EC"/>
+  </linearGradient>
+  <linearGradient id="fg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#E8E0F5"/><stop offset="100%" stop-color="#C8B8E8"/>
+  </linearGradient>
+  <linearGradient id="ig" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#4070B8"/>
+    <stop offset="50%"  stop-color="#F4F4F4"/>
+    <stop offset="100%" stop-color="#B83020"/>
+  </linearGradient>
+</defs>
+
+<!-- Gray background box shortened, top/bottom, to roughly match the visible
+     height of Panel A's dashed "Biopsy site" box on the left. -->
+<rect x="0" y="10" width="288" height="280" fill="#FAFAFA" rx="4"/>
+
+<!-- ① Biopsy core (shifted further left to open up more room for the
+     arrow into WGS sequencing) -->
+<g transform="translate(30, 14)">
+  <ellipse cx="32" cy="7"  rx="30" ry="8"  fill="#EDCDB0" stroke="#B86830" stroke-width="1.4"/>
+  <rect x="2" y="7" width="60" height="70" fill="url(#bg)" stroke="#B86830" stroke-width="1.4"/>
+  <ellipse cx="32" cy="77" rx="30" ry="8"  fill="#D4B090" stroke="#B86830" stroke-width="1.4"/>
+  <line x1="10" y1="22" x2="54" y2="22" stroke="#C8A070" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.5"/>
+  <line x1="7"  y1="38" x2="57" y2="38" stroke="#C8A070" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.5"/>
+  <line x1="10" y1="54" x2="54" y2="54" stroke="#C8A070" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.5"/>
+  <line x1="7"  y1="68" x2="57" y2="68" stroke="#C8A070" stroke-width="0.6" stroke-dasharray="3 2" opacity="0.5"/>
+  <circle cx="22" cy="28" r="8"  fill="#F5DEC8" stroke="#C07840" stroke-width="1"/>
+  <circle cx="50" cy="18" r="7"  fill="#F5DEC8" stroke="#C07840" stroke-width="1"/>
+  <circle cx="52" cy="58" r="8"  fill="#F5DEC8" stroke="#C07840" stroke-width="1"/>
+  <circle cx="38" cy="44" r="5"  fill="#B090D8" stroke="#7050A8" stroke-width="1"/>
+  <circle cx="16" cy="58" r="4"  fill="#B090D8" stroke="#7050A8" stroke-width="1"/>
+  <circle cx="30" cy="70" r="4"  fill="#AACAAA" stroke="#608860" stroke-width="0.9"/>
+  <circle cx="52" cy="40" r="4"  fill="#E8C060" stroke="#A08020" stroke-width="0.9"/>
+</g>
+<text x="62" y="108" text-anchor="middle" font-size="9" fill="#555" font-weight="500">Biopsy core</text>
+
+<!-- Arrow: Biopsy core → WGS sequencer (20% shorter), carrying the "DNA
+     extraction & library prep" label directly. -->
+<line x1="96" y1="57" x2="170" y2="57" stroke="#CCC" stroke-width="1.6"/>
+<polygon points="170,57 164,53 164,61" fill="#CCC"/>
+<text x="133" y="42" text-anchor="middle" font-size="6.5" fill="#8870C0" font-style="italic" font-weight="700">DNA extraction</text>
+<text x="133" y="49" text-anchor="middle" font-size="6.5" fill="#8870C0" font-style="italic">&amp; library prep</text>
+
+<!-- WGS sequencer -->
+<g transform="translate(172, 8)">
+  <rect x="0" y="4" width="88" height="94" rx="8" fill="#E0D8F0" stroke="#8870C0" stroke-width="1.8"/>
+  <rect x="7" y="12" width="74" height="36" rx="3" fill="#1A2840" stroke="#5060A0" stroke-width="1"/>
+  <text x="44" y="26" text-anchor="middle" font-size="9.5" fill="#00E080" font-weight="700" font-family="Courier New, monospace">WGS</text>
+  <polyline points="10,42 16,37 23,44 30,29 37,40 44,32 51,43 58,34 65,41 71,37 78,42"
+            fill="none" stroke="#00E080" stroke-width="1.1"/>
+  <!-- DNA library tube loaded into the sequencer -->
+  <rect x="9" y="54" width="70" height="20" rx="3" fill="#EDEDF5" stroke="#8878B0" stroke-width="1" stroke-dasharray="2 1.5"/>
+  <rect x="36" y="49" width="16" height="17" rx="3" fill="url(#tu)" stroke="#5890C0" stroke-width="1"/>
+  <path d="M 36 66 Q 36 74 44 74 Q 52 74 52 66 Z" fill="url(#tu)" stroke="#5890C0" stroke-width="1"/>
+  <circle cx="14" cy="87" r="4"  fill="#00C060"/>
+  <circle cx="26" cy="87" r="4"  fill="#E0A000"/>
+  <rect x="57" y="83" width="24" height="8" rx="2" fill="#9088B0" stroke="#7060A0" stroke-width="0.8"/>
+</g>
+<text x="216" y="123" text-anchor="middle" font-size="8.5" fill="#4A30A0" font-weight="700">Whole Genome Sequencing</text>
+
+<!-- CIDER connector: straight sideways line starting directly from
+     "Whole Genome Sequencing", turning down only at the very end into
+     the repertoire table. -->
+<path d="M 158,120 L 70,120 L 70,143"
+      fill="none" stroke="#5840A0" stroke-width="1.6" stroke-dasharray="4 3" stroke-linecap="round"/>
+<polygon points="70,143 65,134 75,134" fill="#5840A0"/>
+<text x="114" y="116" text-anchor="middle" font-size="6.5" fill="#5840A0" font-style="italic" font-weight="700">CIDER</text>
+
+<!-- Bottom row, left: CDR3 repertoire table (shortened, moved up slightly).
+     Five rows, one per T cell in Panel A; the two identical TRA rows
+     collapse to 4 unique CDR3s overall. -->
+<rect x="8" y="143" width="104" height="110" rx="7" fill="#F5F0FF" stroke="#8060C0" stroke-width="1.4"/>
+<text x="60" y="158" text-anchor="middle" font-size="7" fill="#5840A0" font-weight="700">CIDER: T-cell</text>
+<text x="60" y="167" text-anchor="middle" font-size="7" fill="#5840A0" font-weight="700">CDR3 repertoire</text>
+<text x="26" y="179" text-anchor="middle" font-size="5.3" fill="#8060C0" font-weight="600">Locus</text>
+<text x="46" y="179" text-anchor="start"  font-size="5.3" fill="#8060C0" font-weight="600">CDR3 seq</text>
+<!-- TRA row -->
+<rect x="12" y="183" width="28" height="10" rx="3" fill="#D08030"/>
+<text x="26" y="190.5" text-anchor="middle" font-size="6.1" fill="white" font-weight="700">TRA</text>
+<rect x="44" y="183" width="52" height="10" rx="2" fill="#F5EDE0"/>
+<text x="46" y="190.5" font-size="6.1" fill="#3A2060" font-family="Courier New, monospace">CAVSDNQGGKLIF</text>
+<!-- TRA row (duplicate) -->
+<rect x="12" y="196" width="28" height="10" rx="3" fill="#D08030"/>
+<text x="26" y="203.5" text-anchor="middle" font-size="6.1" fill="white" font-weight="700">TRA</text>
+<rect x="44" y="196" width="52" height="10" rx="2" fill="#F5EDE0"/>
+<text x="46" y="203.5" font-size="6.1" fill="#3A2060" font-family="Courier New, monospace">CAVSDNQGGKLIF</text>
+<!-- TRB row -->
+<rect x="12" y="209" width="28" height="10" rx="3" fill="#5890C0"/>
+<text x="26" y="216.5" text-anchor="middle" font-size="6.1" fill="white" font-weight="700">TRB</text>
+<rect x="44" y="209" width="52" height="10" rx="2" fill="#E8E0F5"/>
+<text x="46" y="216.5" font-size="6.1" fill="#3A2060" font-family="Courier New, monospace">CASSLGQGAYEQYF</text>
+<!-- TRB row 2 -->
+<rect x="12" y="222" width="28" height="10" rx="3" fill="#5890C0"/>
+<text x="26" y="229.5" text-anchor="middle" font-size="6.1" fill="white" font-weight="700">TRB</text>
+<rect x="44" y="222" width="52" height="10" rx="2" fill="#E8E0F5"/>
+<text x="46" y="229.5" font-size="6.1" fill="#3A2060" font-family="Courier New, monospace">CASSQGTGNTIYF</text>
+<!-- TRG row -->
+<rect x="12" y="235" width="28" height="10" rx="3" fill="#509050"/>
+<text x="26" y="242.5" text-anchor="middle" font-size="6.1" fill="white" font-weight="700">TRG</text>
+<rect x="44" y="235" width="52" height="10" rx="2" fill="#E5F0E5"/>
+<text x="46" y="242.5" font-size="6.1" fill="#3A2060" font-family="Courier New, monospace">CALWDSSGKLTF</text>
+
+<!-- Small arrow: repertoire table → combined CIDER score box -->
+<line x1="116" y1="198" x2="126" y2="198" stroke="#8060C0" stroke-width="1.3"/>
+<polygon points="128,198 123,194 123,202" fill="#8060C0"/>
+
+<!-- Bottom row, right: single combined CIDER score box (shortened, moved
+     up slightly). Stacks, top to bottom, the CIDER score itself and the
+     worked-example calculation. The immune-infiltration scale now sits
+     just below, as its own outside element rather than inside the box.
+     Worked example matches the 5 T cells in Panel A (5 cells, 4 unique
+     CDR3s: 1 TRA + 2 TRB + 1 TRG). -->
+<rect x="132" y="143" width="140" height="100" rx="8" fill="#F5F0FF" stroke="#8060C0" stroke-width="1.6"/>
+
+<!-- CIDER score (top) -->
+<rect x="140" y="151" width="124" height="22" rx="6" fill="#7050A8" stroke="#5030A0" stroke-width="1.2"/>
+<text x="202" y="165.5" text-anchor="middle" font-size="9" fill="white" font-weight="700">CIDER score</text>
+<line x1="140" y1="180" x2="264" y2="180" stroke="#C8B8E8" stroke-width="0.8"/>
+
+<!-- Numerator: unique-CDR3 breakdown, multiplied by 100. Denominator:
+     median sequencing depth. (No separate "CIDER score calculation"
+     header — the pill above already labels the box, and the fraction
+     layout reads as a calculation on its own.) -->
+<text x="202" y="197" text-anchor="middle" font-size="7.4" fill="#555">5 total CDR3s &#8594; 4 unique CDR3s</text>
+<text x="194" y="212" text-anchor="middle" font-size="7.8" font-weight="700"><tspan fill="#D08030">1 TRA</tspan><tspan fill="#555" dx="2">+</tspan><tspan fill="#5890C0" dx="2">2 TRB</tspan><tspan fill="#555" dx="2">+</tspan><tspan fill="#509050" dx="2">1 TRG</tspan></text>
+<!-- Fraction bar (narrowed to leave room for the × 100 beside it) -->
+<line x1="140" y1="219" x2="248" y2="219" stroke="#8060C0" stroke-width="0.7"/>
+<text x="194" y="233" text-anchor="middle" font-size="7" font-weight="700" fill="#3A2060">Median Sequencing Depth</text>
+<!-- × 100 multiplies the whole fraction — placed beside it, vertically
+     centered between the numerator and denominator. -->
+<text x="258" y="222" text-anchor="middle" font-size="9.6" font-weight="700" fill="#3A2060">&#215; 100</text>
+
+<!-- Immune infiltration proxy — outside and below the CIDER score box. -->
+<text x="202" y="256" text-anchor="middle" font-size="8.45" fill="#5840A0" font-weight="700">Immune infiltration proxy</text>
+<rect x="144" y="259" width="116" height="9" rx="3" fill="url(#ig)"/>
+<text x="141" y="275" text-anchor="end"   font-size="5.8" fill="#4070B8" font-weight="600">Low</text>
+<text x="263" y="275" text-anchor="start" font-size="5.6" fill="#B83020" font-weight="600">High</text>
+
+</svg>
+
+<!-- Horizontal dotted yellow connector: Biopsy site (Panel A) → Biopsy core
+     icon (Panel B). Drawn as a single continuous path, in outer-canvas
+     coordinates, AFTER Panel B closes — so it paints on top of Panel B's
+     background with one unbroken dash pattern instead of being split
+     into two separately-dashed pieces (which could fall out of phase at
+     the seam and look like a break). -->
+<line x1="395" y1="102" x2="484" y2="89" stroke="#CC9955" stroke-width="1.6" stroke-dasharray="1.5 3.5" stroke-linecap="round"/>
+<polygon points="484,89 474,85 475,94" fill="#CC9955"/>
+
+</svg>

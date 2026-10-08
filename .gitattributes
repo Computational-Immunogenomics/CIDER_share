@@ -1,0 +1,12 @@
+# Strip Jupyter notebook outputs before every commit.
+# Requires nbstripout to be installed as a git filter:
+#
+#   pip install nbstripout
+#   nbstripout --install          # registers the filter in .git/config
+#
+# After that, outputs are stripped automatically on `git add` — no manual
+# step needed. The notebooks on disk are unaffected; only the staged version
+# is cleaned.
+
+*.ipynb filter=nbstripout
+*.ipynb diff=ipynb

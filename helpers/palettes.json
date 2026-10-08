@@ -1,0 +1,34 @@
+{   
+    "discrete": {
+        "default": ["#fd756f", "#7eb0d5", "#b2e061", "#bd7ebe", "#ffb55a",
+                    "#ffee65", "#beb9db", "#fdcce5", "#bba387", "#c0d9af",
+                    "#b5b5b5", "#606060"],
+        "dark":    ["#d2544e", "#5a8fb4", "#6b9442", "#925c97", "#d08934",
+                    "#c6b82f", "#8e85ab", "#c68ca1", "#8e7359", "#7e9d7d",
+                    "#828282", "#2a2a2a"],
+        "darker":  ["#b6322c", "#3a6f94", "#5e862d", "#7a4886", "#c27114",
+                    "#bba817", "#7d71a4", "#a75377", "#7a5a3b", "#78976b",
+                    "#6b6b6b", "#1a1a1a"],
+        "rainbow": ["#f04437", "#e81f64", "#903e97", "#65499e", "#4356a5",
+                    "#478fcc", "#34a4dd", "#00bcd4", "#009889", "#4bb04f",
+                    "#8bc34c", "#ccda3a", "#fced3a", "#ffc10e", "#f8991d",
+                    "#f1592c", "#7a5649", "#9f9e9e", "#607f8c"],
+        "immunocomp_logo":          ["#4080cc", "#f48022", "#68c199"],
+        "binary_immunocomp_logo":   ["#4080cc", "#68c199"],
+        "non_observed": ["#8E9399", "#dd5129"],
+        "low_high_recurrency" : ["#dd5129", "#91351C", "#692614"],
+        "onco_pres" : ["#B04561", "#45B077"],
+        "outliers_onco" : ["#B04561", "#632737"],
+        "outliers_pres" : ["#45B077", "#276343"],
+        "onco_tsg_unk_non" : ["#451316", "#C43740", "#DEC3C5", "#3A4B54"],
+        "early_late" : ["#41B0AE", "#B05641"],
+        "resist_not" : ["#8F2547", "#345E5A"]
+    },
+    "continuous": {
+        "recurrence_cont": ["#fbe9e7", "#ffccbd", "#ffac92", "#ff8a65", "#ff7043", "#ff5722", "#e64a19", "#bf360c", "#822307", "#521604", "#2B0C03"],
+        "regressions": ["#420f75", "#61378c", "#815ea3", "#a188bb", "#c0b0d1", "#e0d7e8", "#ffffff", "#fbf3d5", "#f7e6ab", "#f2d97e", "#eecd54", "#eac02a", "#e6b400"],
+        "optimality": ["#121B2B", "#273B61", "#345084", "#405a95", "#3d619d", "#5480b5", "#9ba9ba", "#d9c5b5", "#cfb267", "#a4693e", "#894b33", "#693829"],
+        "obs_non_difference" : ["#1e8e99", "#3e9ea7", "#5eaeb6", "#7ebec4", "#9fcfd4", "#bfdfe2", "#dfeff1", "#ffffff", "#f1e4db", "#e2c9b7", "#d4ad93", "#c4916c", "#b67548", "#a75a24", "#993f00"],
+        "immunocomp_logo": ["#4080cc", "#ffffff", "#68c199"]
+    }
+}
